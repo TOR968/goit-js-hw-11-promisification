@@ -1,27 +1,27 @@
-## Задание 1
+## Завдання 1
 
-Напиши функцию `delay(ms)`, которая возвращает промис, переходящий в состояние
-`"resolved"` через `ms` миллисекунд. Значением исполнившегося промиса должно
-быть то кол-во миллисекунд которое передали во время вызова функции `delay`.
+Напиши функцію `delay(ms)`, яка повертає проміс, що переходить в стан
+`"resolved"` через `ms` мілісекунд. Значенням промісу, яке виповнилося має
+бути та кількість мілісекунд, яку передали під час виклику функції `delay`.
 
 ```js
 const delay = ms => {
-  // Твой код
+  // Твій код
 };
 
 const logger = time => console.log(`Resolved after ${time}ms`);
 
-// Вызовы функции для проверки
+// Виклич функції для перевірки
 delay(2000).then(logger); // Resolved after 2000ms
 delay(1000).then(logger); // Resolved after 1000ms
 delay(1500).then(logger); // Resolved after 1500ms
 ```
 
-## Задание 2
+## Завдання 2
 
-Перепиши функцию `toggleUserState()` так, чтобы она не использовала
-callback-функцию `callback`, а принимала всего два параметра `allUsers` и
-`userName` и возвращала промис.
+Перепиши функцію `toggleUserState()` так, щоб вона не використовувала
+callback-функцію `callback`, а приймала всього два параметри `allUsers` і
+`userName` і повертала проміс.
 
 ```js
 const users = [
@@ -42,23 +42,23 @@ const toggleUserState = (allUsers, userName, callback) => {
 const logger = updatedUsers => console.table(updatedUsers);
 
 /*
- * Сейчас работает так
+ * Зараз працює так
  */
 toggleUserState(users, 'Mango', logger);
 toggleUserState(users, 'Lux', logger);
 
 /*
- * Должно работать так
+ * Повинно працювати так
  */
 toggleUserState(users, 'Mango').then(logger);
 toggleUserState(users, 'Lux').then(logger);
 ```
 
-## Задание 3
+## Завдання 3
 
-Перепиши функцию `makeTransaction()` так, чтобы она не использовала
-callback-функции `onSuccess` и `onError`, а принимала всего один параметр
-`transaction` и возвращала промис.
+Перепиши функцію `makeTransaction()` так, щоб вона не використовувала
+callback-функції `onSuccess` і `onError`, а приймала всього один параметр
+`transaction` і повертала проміс.
 
 ```js
 const randomIntegerFromInterval = (min, max) => {
@@ -88,14 +88,14 @@ const logError = id => {
 };
 
 /*
- * Работает так
+ * Працює так
  */
 makeTransaction({ id: 70, amount: 150 }, logSuccess, logError);
 makeTransaction({ id: 71, amount: 230 }, logSuccess, logError);
 makeTransaction({ id: 72, amount: 75 }, logSuccess, logError);
 makeTransaction({ id: 73, amount: 100 }, logSuccess, logError);
 /*
- * Должно работать так
+ * Повинно працювати так
  */
 makeTransaction({ id: 70, amount: 150 })
   .then(logSuccess)
