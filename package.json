@@ -1,27 +1,29 @@
 {
-  "name": "goit-js-hw-11-color-switch",
+  "name": "goit-js-hw-11-promisification",
   "version": "1.0.0",
   "description": "Есть массив цветов в hex-формате и кнопки `Start` и `Stop`.",
   "main": "index.js",
   "dependencies": {
-    "gh-pages": "^3.1.0",
+    "gh-pages": "^3.1.0"
+  },
+  "devDependencies": {
     "parcel-bundler": "^1.12.4"
   },
-  "devDependencies": {},
   "scripts": {
     "dev": "parcel ./src/index.html",
-    "build": "parcel build ./src/index.html --public-url /goit-js-hw-11-color-switch/",
+    "build": "parcel build ./src/index.html --public-url /goit-js-hw-11-promisification/",
     "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TOR968/goit-js-hw-11-color-switch.git"
+    "url": "git+https://github.com/TOR968/goit-js-hw-11-promisification.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/TOR968/goit-js-hw-11-color-switch/issues"
+    "url": "https://github.com/TOR968/goit-js-hw-11-promisification/issues"
   },
-  "homepage": "https://tor968.github.io/goit-js-hw-11-color-switch/"
+  "homepage": "https://tor968.github.io/goit-js-hw-11-promisification/",
+  "keywords": []
 }
